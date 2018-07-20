@@ -18,12 +18,7 @@
                 <updatePolicy>never</updatePolicy>
             </releases>
         </pluginRepository>
-        <pluginRepository>
-           <id>smartbear-sweden-plugin-repository</id>
-           <url>http://www.soapui.org/repository/maven2/</url>
-       </pluginRepository>
     </pluginRepositories>
-
 <!-- This is where you add the environment specific properties under various profile names -->
  <profiles>
         <profile>
@@ -119,51 +114,6 @@
                     </execution>
 	       	</executions>
             </plugin>
-            <plugin>
-                <groupId>com.smartbear.soapui</groupId>
-                <artifactId>soapui-pro-maven-plugin</artifactId>
-                <version>4.6.1</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.6</version>
-                    </dependency>
-                </dependencies>    
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <projectFile>simple-test-soapui-project.xml</projectFile>
-                            <projectProperties>
-                                <value>message=Hello World!</value>
-                            </projectProperties>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-	    <plugin>
-               <groupId>com.smartbear.soapui</groupId>
-               <artifactId>soapui-pro-maven-plugin</artifactId>
-               <version>5.1.1</version>
-                  <configuration>
-                  </configuration>
-                  <dependencies>
-                     <dependency>
-                        <groupId>org.reflections</groupId>
-                        <artifactId>reflections</artifactId>
-                        <version>0.9.9-RC1</version>
-                     </dependency>
-                     <dependency>
-                        <groupId>org.apache.poi</groupId>
-                        <artifactId>poi-ooxml</artifactId>
-                        <version>3.10-FINAL</version>
-                    </dependency>
-                 </dependencies>
-             </plugin>
         </plugins>
     </build>
         </profile>
